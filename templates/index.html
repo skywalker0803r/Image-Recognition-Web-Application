@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Recognition</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1>Image Recognition</h1>
+		<form method="POST" action="/upload" enctype="multipart/form-data">
+			<label for="file">Upload an image:</label>
+			<input type="file" name="file" id="file">
+			<input type="submit" value="Upload">
+		</form>
+	</div>
+</body>
+</html>

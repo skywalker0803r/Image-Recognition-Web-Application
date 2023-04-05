@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Recognition Result</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1>Image Recognition Result</h1>
+		<p>The image was classified as <strong>{{ result['label'] }}</strong> with a confidence of <strong>{{ result['confidence'] }}</strong>.</p>
+	</div>
+</body>
+</html>
