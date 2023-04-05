@@ -90,7 +90,7 @@ def recognize_image(filepath):
 
 # Run the app
 if __name__ == '__main__':
-    app.config['UPLOAD_FOLDER'] = 'uploads'
+    app.config['UPLOAD_FOLDER'] = 'static/uploads'
     if not os.path.exists(app.config['UPLOAD_FOLDER']):
         os.makedirs(app.config['UPLOAD_FOLDER'])
     app.run(debug=True)
