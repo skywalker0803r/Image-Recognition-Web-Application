@@ -8,6 +8,7 @@
 	<div class="container">
 		<h1>Image Recognition Result</h1>
 		<p>The image was classified as <strong>{{ result['label'] }}</strong> with a confidence of <strong>{{ result['confidence'] }}</strong>.</p>
+		<img src="{{ url_for('static', filename = 'uploads'+'/'+result['filename']) }}">
 	</div>
 </body>
 </html>

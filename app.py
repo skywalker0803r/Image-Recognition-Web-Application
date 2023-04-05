@@ -65,6 +65,7 @@ def upload():
 
     # Call the image recognition function and return the results
     result = recognize_image(filepath)
+    result['filename'] = filename
     return render_template('result.html', result=result)
 
 # Define the function for image recognition
@@ -85,7 +86,7 @@ def recognize_image(filepath):
     label, confidence = predict_image(model, image)
 
     # Return the result
-    return {'label': label, 'confidence': confidence, 'filepath': filepath}
+    return {'label': label, 'confidence': confidence}
 
 # Run the app
 if __name__ == '__main__':
